@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Net;
 using System.Net.Mail;
-using System.Threading;
 using HGINF;
+using System.Diagnostics;
 
 
 namespace HGINF
@@ -85,7 +84,8 @@ namespace HGINF
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SendMail("smtp.gmail.com", "vitmuzz@gmail.com", "k9m3xwxujQ2HXk", "aukustik@yandex.ru", "Тема письма", "Я ЗАКАЗЫВАЮ ВАШ ЗВОНОК!!!!!!!!!!! ЗВОНИТЕ МНЕ ПОЛНОСТЬЮ!!!!!!", "");
+            Form3 formCall = new Form3();
+            formCall.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -112,6 +112,7 @@ namespace HGINF
                         this.Refresh();
                     }
                     this.hidden = false;
+                    pictureBox2.Image = Properties.Resources.kreqweqst;
                 }
                 else if (this.hidden == false)
                 {
@@ -121,7 +122,21 @@ namespace HGINF
                         this.Width -= 1;
                     }
                     this.hidden = true;
+                    pictureBox2.Image = Properties.Resources.strelka1;
                 }
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("TW.exe");
+            }
+            catch
+            {
+                MessageBox.Show("Не удалось запустить \"Удаленный помощник\"");
             }
         }
     }

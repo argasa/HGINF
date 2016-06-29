@@ -40,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +79,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(263, 20);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Как вас зовут?";
             // 
             // textBox3
             // 
@@ -85,7 +86,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(263, 20);
             this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "Наименование Организации";
             // 
             // textBox4
             // 
@@ -93,7 +93,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(263, 20);
             this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "Номер Компьютера";
             // 
             // button1
             // 
@@ -101,8 +100,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 105);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
+            this.button1.Text = "Отправить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -138,11 +138,28 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 178);
+            this.label4.Location = new System.Drawing.Point(9, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(394, 19);
             this.label4.TabIndex = 10;
             this.label4.Text = "4. Максимально подробно опишите вашу проблему:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(303, 73);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(263, 20);
+            this.textBox5.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(8, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(159, 19);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "0. Номер Телефона:";
             // 
             // Form2
             // 
@@ -150,6 +167,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(615, 333);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -185,5 +204,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label5;
     }
 }
