@@ -106,7 +106,9 @@ namespace HGINF
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            textBox2.Text="ИмяИмяИмя";
+            richTextBox1.Text ="заявка_заявка_заявка";
+            maskedTextBox1.Text="5555555555";
         }
 
         private void textBox2_Click(object sender, EventArgs e)
