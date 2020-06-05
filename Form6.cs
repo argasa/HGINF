@@ -24,7 +24,8 @@ namespace HGINF
         private void button1_Click(object sender, EventArgs e)
         {
                 File.Delete("pcnum.conf");
-                File.WriteAllText("pcnum.conf", maskedTextBox1.Text);
+            string Pc = WorkBD.GetPCnum(maskedTextBox1.Text);
+                File.WriteAllText("pcnum.conf",Pc );
                 this.Close();
         }
     }

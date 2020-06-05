@@ -82,28 +82,13 @@ namespace HGINF
                 // SendMail("smtp.gmail.com", "hginformer@gmail.com", "Hgroup911adm", "aukustik@yandex.ru", "Заявка от " + strFIO, "\nОтдел: " + strPC + "\n\nИмя: " + strFIO + "\n\nНомер телефона: +7 " + strPNum + "\n\nНомер ПК: " + strNum + "\n\nТекст Заявки: \n\n" + strText, "");
 
 
-                putMessege(strFIO, strPC, strPNum, strNum, strText);
+                WorkBD.putMessege(strFIO, strPC, strPNum, strNum, strText);
                 this.Close();
 
             }
         }
 
-       public static void putMessege(string strFIO, string strPC, string strPNum, string strNum, string strText="")
-        {
-            using (RequestContext db = new RequestContext())
-            {
-
-                Request request = new Request { Name = strFIO, Phon = strPNum, Message = strText, Category = strPC, NomPC = strNum };
-                db.Requests.Add(request);
-                db.SaveChanges();
-
-                var users = db.Requests;
-                foreach (Request u in users)
-                {
-                    MessageBox.Show(u.Id + " " + u.Name + " " + u.Phon + " " + u.Message + "  " + u.NomPC);
-                }
-            }
-        }
+      
         private void Form2_Load(object sender, EventArgs e)
         {
             textBox2.Text="ИмяИмяИмя";

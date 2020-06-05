@@ -13,5 +13,7 @@ namespace HGINF
         { }
 
         public DbSet<Request> Requests { get; set; }
+
+        public DbSet<IpPCnum> IpPCnums { get; set; }
     }
 }

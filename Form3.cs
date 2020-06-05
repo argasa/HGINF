@@ -76,7 +76,7 @@ namespace HGINF
             else
             {
                 //SendMail("smtp.gmail.com", "hginformer@gmail.com", "Hgroup911adm", "aukustik@yandex.ru", "Заказ звонка от " + strFIO, "Отдел: " + strPC + "\n\nИмя: " + strFIO + "\n\nНомер телефона: +7 " + strNum, "");
-                Form2.putMessege(strFIO, strPC, strPNum, strNum);
+                WorkBD.putMessege(strFIO, strPC, strPNum, strNum);
 
                 this.Close();
             }
