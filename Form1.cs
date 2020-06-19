@@ -105,7 +105,7 @@ namespace HGINF
             formCall.Show();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        public void button1_Click_1(object sender, EventArgs e)
         {
             StreamReader sr3 = new StreamReader("pcnum.conf");
             string line = sr3.ReadToEnd();
@@ -228,7 +228,7 @@ namespace HGINF
             label3.Text = Convert.ToString(trackBar1.Value) + "%";
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        public void pictureBox4_Click(object sender, EventArgs e)
         {
             if (set == false)
             {

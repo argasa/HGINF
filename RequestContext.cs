@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HGINF
 {
-    class RequestContext: DbContext
+    public class RequestContext: DbContext
     {
         public RequestContext()
            : base("DbConnection")
@@ -14,6 +14,6 @@ namespace HGINF
 
         public DbSet<Request> Requests { get; set; }
 
-        public DbSet<IpPCnum> IpPCnums { get; set; }
+         public DbSet<IpPCnum> IpPCnums { get; set; }
     }
 }

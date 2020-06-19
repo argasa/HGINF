@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HGINF
 {
-    class IpPCnum
+    public class IpPCnum
     {
         public int Id { get; set; }
         public string IP { get; set; }

@@ -52,7 +52,7 @@ namespace HGINF
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             StreamReader sr = new StreamReader("pcnum.conf");
             String line = sr.ReadToEnd();
@@ -94,6 +94,7 @@ namespace HGINF
             textBox2.Text="ИмяИмяИмя";
             richTextBox1.Text ="заявка_заявка_заявка";
             maskedTextBox1.Text="5555555555";
+            radioButton1.Checked=true;
         }
 
         private void textBox2_Click(object sender, EventArgs e)
