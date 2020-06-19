@@ -7,6 +7,7 @@ namespace HGINF
 {
     public class WorkBD
     {
+
         public static void putMessege(string strFIO, string strPC, string strPNum, string strNum, string strText = "")
         {
             using (RequestContext db = new RequestContext())

@@ -8,6 +8,7 @@ namespace HGINF
 {
     public class RequestContext: DbContext
     {
+
         public RequestContext()
            : base("DbConnection")
         { }

@@ -51,6 +51,7 @@ namespace HGINF
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            
             StreamReader sr = new StreamReader("pcnum.conf");
             String line = sr.ReadToEnd();
             string strNum = line;
